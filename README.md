@@ -1,4 +1,4 @@
-# Angular Dashboard starterkit template
+# Angular Signup Page
 This is an Angular dashboard starterkit template project.
 
 
@@ -6,14 +6,9 @@ This is an Angular dashboard starterkit template project.
 - Bootstrap 4 (https://getbootstrap.com/)
 - Fontawesome 5 (https://fontawesome.com/)
 - Angular 6 (https://angular.io/)
-- A basic authentication service to handle the login/logout/check authentication token
-- A simple secured dashboard
-- A simple login page (including error handling)
-- A fake backend service to handle the api request
-- A service to inject the authentication token on each request to the api endpoint
+- A simple Signup page (including error handling)
 - Angular Routing system
 - Some RxJS function (http://reactivex.io/) 
-- Feature "Items"   : Add / Delete / Edit items using CRUD (Create Read Update Delete) methods
 
 ## Install and run this project
 - Install NodeJS (https://nodejs.org)
