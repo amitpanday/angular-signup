@@ -25,26 +25,13 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if (this.authService.hasToken()) {
-      this.handleLoginSuccess();
-    } else {
-      this.initForm();
-    }
+    this.initForm();
   }
-
-  // checkRequiredClass(frmControl: string) {
-  //   const t  = this.loginForm.get()
-  //   return {
-  //     'required' : false
-  //   };
-  // }
 
   onSubmitButtonClicked() {
     this.error  = false;
     this.processing  = false;
-    if (this.loginForm.valid) {
-      this.login();
-    }
+    this.login();
   }
 
   private login() {
@@ -58,8 +45,6 @@ export class LoginComponent implements OnInit {
         }
       },
       err => {
-        console.log('---- ERROR ---- ');
-        console.log(err);
         this.handleLoginError();
       });
   }
@@ -77,7 +62,11 @@ export class LoginComponent implements OnInit {
 
   private initForm() {
     this.loginForm = new FormGroup({
-      username: new FormControl('', [ Validators.required, Validators.email]),
+      firstName: new FormControl('', [ Validators.required]),
+      lastName: new FormControl('', [ Validators.required]),
+      userName: new FormControl('', [ Validators.required]),
+      dobName: new FormControl('', [ Validators.required]),
+      countryName: new FormControl('', [ Validators.required]),
       password: new FormControl('', Validators.required),
     });
   }
